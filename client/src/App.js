@@ -34,7 +34,7 @@ const App = () => {
       id : id
     })
   }
-
+// Delete the items using id
   const DeleteButton = (id) => {
     axios.delete(`http://localhost:3001/delete/${id}`, {
     })
@@ -71,19 +71,12 @@ const App = () => {
                 <input type="text" placeholder="Enter new foodname" onChange={(e) => setUpdateItems(e.target.value)} />
                 <button onClick={() => updateButton(item._id)}>Update</button>
                 <button style={{backgroundColor:'red'}} onClick={() => DeleteButton(item._id)}>Delete</button>
-                 </h2>
-                
-              </div>
-             
-            
-            )
-          })
+                 </h2>  
+              </div>         
+            )})
         }
-       </div>
-        
-       
+       </div>    
       </div>
-            
     )
 }
 
